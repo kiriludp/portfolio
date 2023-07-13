@@ -1,28 +1,35 @@
-import Nav from 'react-bootstrap/Nav';
+import '../assets/Navigation.css'
+import { Navbar, Nav, Container } from 'react-bootstrap';
+import React, {useState} from 'react';
 
+function Navigation() {
 
-function Navigation () {
+  const [navbarOpen, setNavbarOpen] = useState(false);
+    
     return (
-    <Nav
-    activeKey="/home"
-    onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
-  >
-    <Nav.Item>
-      <Nav.Link href="/home">Active</Nav.Link>
-    </Nav.Item>
-    <Nav.Item>
-      <Nav.Link eventKey="link-1">Link</Nav.Link>
-    </Nav.Item>
-    <Nav.Item>
-      <Nav.Link eventKey="link-2">Link</Nav.Link>
-    </Nav.Item>
-    <Nav.Item>
-      <Nav.Link eventKey="disabled" disabled>
-        Disabled
-      </Nav.Link>
-    </Nav.Item>
-  </Nav>
-);
+      <div className="navi">
+        <button className="toggle"
+        onClick={() => setNavbarOpen((prev) => !prev)}>
+        {navbarOpen ? (<MdClose style={{width: '32px', height: '32px'}} />
+    ) : (
+      <fiMenu
+        style={{
+          width: '32px',
+          height: '32px',
+        }}
+        />
+    )}
+        </button>
+        <ul className={`menu-nav${navbarOpen ? 'show-menu' : ''}`}>
+                <Nav.Link href="/">Home</Nav.Link>
+                <Nav.Link href="/about">About</Nav.Link>
+                <Nav.Link href="/resume">Resume</Nav.Link>
+                <Nav.Link href="/portfolio">Portfolio</Nav.Link>
+        </ul>
+           
+      </div>
+    )
 }
+ 
 
 export default Navigation;
