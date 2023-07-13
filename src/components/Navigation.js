@@ -1,5 +1,7 @@
-import '../assets/Navigation.css'
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import '../assets/Navigation.css';
+import mdMenu from '../assets/imgs/menu.svg';
+import mdClose from '../assets/imgs/close.svg';
+import { Nav } from 'react-bootstrap';
 import React, {useState} from 'react';
 
 function Navigation() {
@@ -10,9 +12,9 @@ function Navigation() {
       <div className="navi">
         <button className="toggle"
         onClick={() => setNavbarOpen((prev) => !prev)}>
-        {navbarOpen ? (<MdClose style={{width: '32px', height: '32px'}} />
+        {navbarOpen ? (<img src={mdClose} style={{width: '32px', height: '32px'}} />
     ) : (
-      <fiMenu
+      <img src={mdMenu}
         style={{
           width: '32px',
           height: '32px',
