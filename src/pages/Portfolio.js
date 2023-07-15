@@ -28,21 +28,24 @@ function Portfolio() {
     <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
         <img
-          className="d-block w-100 pics"
+          className="d-block w-100"
           src={brick}
           alt="First slide"
         />
+        <div className="fadedbox">
+          <div className="project caption">Brick Breaker Game</div>
+        </div>
         </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100 pics"
+          className="d-block w-100"
           src={meditation}
           alt="Second slide"
         />
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100 pics"
+          className="d-block w-100"
           src={horror}
           alt="Third slide"
         />
