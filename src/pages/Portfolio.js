@@ -6,53 +6,47 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Carousel from 'react-bootstrap/Carousel';
+import {useState} from 'react';
 
 function Portfolio() {
+    const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex) => {
+    setIndex(selectedIndex);
+  };
 
     return (
     
     <div className='portfolio-body'>
-         <Container className="title">
+         <Container className="head">
         <Row className="justify-content-lg">
             <Col lg="auto">
                 Portfolio
             </Col>
         </Row>
     </Container>
-    <Carousel>
-        <Carousel.Item>
-            <img
-            className='d-block w-100'
-            src={brick}
-            alt="First slide"/>
-        
-        <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>We will put a link here</p>
-        </Carousel.Caption>
+    <Carousel activeIndex={index} onSelect={handleSelect}>
+      <Carousel.Item>
+        <img
+          className="d-block w-100 pics"
+          src={brick}
+          alt="First slide"
+        />
         </Carousel.Item>
-        <Carousel.Item>
-            <img
-            className='d-block w-100'
-            src={meditation}
-            alt="First slide"/>
-        
-        <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>We will put a link here</p>
-        </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-            <img
-            className='d-block w-100'
-            src={horror}
-            alt="First slide"/>
-        
-        <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>We will put a link here</p>
-        </Carousel.Caption>
-        </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100 pics"
+          src={meditation}
+          alt="Second slide"
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100 pics"
+          src={horror}
+          alt="Third slide"
+        />
+      </Carousel.Item>
     </Carousel>
     </div>
     
