@@ -1,64 +1,33 @@
-.carousel-inner  {
-    position: relative;
+.carousel-item {
+    cursor: pointer;
     
-    }
     
-   .carousel-item img {
-    top: 50;
-    left: 50;
-    translate: middle;
-    height: 386px;
-    width: 705px;
+
+}
+
+.carousel-item {
+    
+}
+
+.carousel-item img {
+    transition: all .3s;
+    transform: scale(1.1);
+    opacity: .5;
+    max-height: 386px;
+    max-width: 705px;
     margin: auto;
     margin-bottom: 50px;
-   }
-
-   .carousel-item .fadedbox {
-    background: #8E793E;
-    position: absolute;
-    top: 0;
-    left: 50;
-    translate: middle;
-    height: 380px;
-    width: 700px;
-    margin-left: 15%;
-    color: #fff;
-    -webkit-transition: all 300ms ease-out;
-    -moz-transition: all 300ms ease-out;
-    -o-transition: all 300ms ease-out;
-    -ms-transition: all 300ms ease-out;
-    transition: all 300ms ease-out;
-    opacity: 0;
-   
-    
     
 }
 
-.carousel-item:hover .fadedbox {
-    opacity: 0.8;
-    
-}
-
-.carousel-item .caption {
-    
-
-
-}
-
-.carousel-item .project {
-    font-size: 30px;
-    text-transform: uppercase;
-    opacity: 0;
-    transition-delay: 0.2s;
-    transition-duration: 0.3s;
-
-}
-
-.carousel-item:hover .project,
-.carousel-item:focus .project {
+.carousel-item:hover img {
+    -moz-box-shadow: 0 0 4px #444;
+    -webkit-box-shadow: 0 0 4px #444;
+    box-shadow: 1px 1px 10px 0px #8E793E;
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale (1.2);
     opacity: 1;
-    transform: translateY(0px);
-    -webkit-transform: translateY(0px);
 }
     
 .head {
