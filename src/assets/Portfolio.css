@@ -12,7 +12,7 @@
 .carousel-item img {
     transition: all .3s;
     transform: scale(1.1);
-    opacity: .5;
+    opacity: 1;
     max-height: 386px;
     max-width: 705px;
     margin: auto;
@@ -23,12 +23,33 @@
 .carousel-item:hover img {
     -moz-box-shadow: 0 0 4px #444;
     -webkit-box-shadow: 0 0 4px #444;
-    box-shadow: 1px 1px 10px 0px #8E793E;
+    box-shadow: 10px 3px 50px 3px #8E793E;
     -ms-transform: scale(1.2);
     -webkit-transform: scale(1.2);
     transform: scale (1.2);
-    opacity: 1;
+    opacity: 0.3;
 }
+
+.carousel-caption {
+    background: transparent;
+    opacity: 0
+}
+
+p{
+    text-align: center;
+    background: transparent;
+}
+
+.carousel-caption:hover {
+    transform:scale(2) translateY(20px);
+    transition: all 1s ease-in;
+    opacity: 1;
+    
+    
+    
+    
+}
+
     
 .head {
     font-size: 80px;
