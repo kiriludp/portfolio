@@ -40,14 +40,33 @@ p{
     background: transparent;
 }
 
+.carousel-caption button {
+    background-color: transparent;
+    border-radius: 100%;
+}
+
+.carousel-caption:hover button {
+    background-color: transparent;
+    box-shadow: 5px 3px 5px 3px #8E793E;
+
+}
+
+
+
 .carousel-caption:hover {
     transform:scale(2) translateY(20px);
     transition: all 1s ease-in;
     opacity: 1;
-    
-    
-    
-    
+}
+
+
+.multi-btn button {
+    margin: 30px;
+    opacity: 0.7;
+}
+
+.multi-btn button:hover {
+    opacity: 1;
 }
 
     

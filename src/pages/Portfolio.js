@@ -6,7 +6,40 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Carousel from "react-bootstrap/Carousel";
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 import { useState } from "react";
+
+function ModalOnClick(props) {
+  return (
+    <Modal {...props} aria-labelledby="contained-modal-title-vcenter">
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          Using Grid in Modal
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body className="grid-example">
+        <Container>
+          <Card>
+            <Card.Img
+              img className="who" 
+              src={brick}
+              alt="card text">
+            </Card.Img>
+          </Card>
+        </Container>
+        <div className="multi-btn">
+          <Button>H</Button>
+          <Button>E</Button>
+          <Button>Y</Button>
+          <Button>!</Button>
+        </div>
+      </Modal.Body>
+      
+    </Modal>
+  )
+};
 
 function Portfolio() {
   const [index, setIndex] = useState(0);
@@ -14,6 +47,8 @@ function Portfolio() {
   const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex);
   };
+
+  const [modalShow, setModalShow] =useState(false);
 
   return (
     <div className="portfolio-body">
@@ -31,8 +66,9 @@ function Portfolio() {
           src={meditation} 
           alt="Second slide" />
           <Carousel.Caption>
-           <p>Meditation App
-            We will have links or something</p> 
+           <p>
+            <Button variant="primary" onClick={() => setModalShow(true)}>Meditation App </Button> </p>
+            <ModalOnClick show={modalShow} onHide={() => setModalShow(false)} />
           </Carousel.Caption>
         </Carousel.Item>
 
