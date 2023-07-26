@@ -1,38 +1,11 @@
-*{
+* {
     background-color: #231F20;
-}
-
-.homepage {
-    height: 100%vh;
-    width: 100%vw;
-}
-
-
-.title {
-    font-size: 100px;
-    margin: 3% auto 5% 10%;
+    color: #EAEAEA;
     font-family: 'Bebas Neue', sans-serif;
-    color: #8E793E;
 
 }
 
-.border {
-    border-style: none;
-    display: flex;
-    justify-content: center;
-    max-width: 60%;
-    margin: 0 auto 15% auto;
-    
 
-}
 
-.styrow {
-    
-    background-color:#FD8515;
-}
-
-p{
-    margin: 10% auto 10% auto;     
-}
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
