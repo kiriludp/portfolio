@@ -3,6 +3,11 @@ import brick from '../assets/imgs/brick2.png';
 import meditation from '../assets/imgs/Meditation2.png';
 import horror from '../assets/imgs/horror2.png';
 import quiz from '../assets/imgs/quiz2.png';
+import note from '../assets/imgs/note.png';
+import coffee from '../assets/imgs/french-press.png';
+import art from '../assets/imgs/brush.png';
+import flag from '../assets/imgs/progress.png';
+import '../assets/Info.css'
 
 
 
@@ -15,20 +20,20 @@ export const info ={
     
     miniBio: [ 
     {
-        emoji: '☕',
-        text: 'fueled by coffee'
+        emoji: <img src={flag} className="emoji" />,
+        text: 'Trans Non-Binary Queer'
     },
     {
-        emoji: '🌎',
-        text: 'based in the US'
+        emoji: <img src={coffee} className="emoji"/>,
+        text: 'Loves Trying New Coffees'
     },
     {
-        emoji: "💼",
-        text: "Systems Engineer at Google"
+        emoji: <img src={art} className="emoji"/>,
+        text: "Artist"
     },
     {
-        emoji: "📧",
-        text: "johnsmith@gmail.com"
+        emoji: <img src={note} className="emoji"/>,
+        text: "Writer"
     }
 ],
     socials: [
@@ -74,22 +79,22 @@ export const info ={
     portfolio: [
         {
             title: 'Meditation App',
-            image: <img src={meditation} />
+            image: <img src={meditation} className='port' />
 
         },
         {
             title: 'MBrick Breaker Game',
-            image: <img src={brick} />
+            image: <img src={brick} className='port' />
 
         },
         {
             title: 'Horror Theme Choose Your Own Adventure',
-            image: <img src={horror} />
+            image: <img src={horror} className='port' />
 
         },
         {
             title: 'Horror Quiz',
-            image: <img src={quiz} />
+            image: <img src={quiz} className='port'/>
 
         },
     ]
