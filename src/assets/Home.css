@@ -2,8 +2,37 @@
     background-color: #231F20;
     color: #EAEAEA;
     font-family: 'Bebas Neue', sans-serif;
-
 }
+
+.title {
+    font-size: 100px;
+    margin: 5% 0 0 6%;
+}
+
+.home-body,
+.head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.head {
+    
+}
+
+.bio {
+    gap: 10px;
+    margin: 2% 0 0 25%;
+}
+
+.social {
+    margin: 15px 0 0 30%;
+}
+
+
 
 
 
