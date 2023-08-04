@@ -14,13 +14,13 @@ function Navigation() {
       <div className="navi">
         <button className="toggle"
         onClick={() => setNavbarOpen((prev) => !prev)}>
-        {navbarOpen ? (<img src={mdClose} style={{width: '32px', height: '32px'}} />
+        {navbarOpen ? (<img src={mdClose} style={{width: '32px', height: '32px'}} className='icon' />
     ) : (
       <img src={mdMenu}
         style={{
           width: '32px',
           height: '32px',
-        }}
+        }} className="icon"
         />
     )}
         </button>
