@@ -1,16 +1,14 @@
-
-
 .navi {
     position: relative;
     margin-left: 20px;
-    
+   
   }
   button {
     cursor: pointer;
     background: transparent;;
     border: none;
     font-size: 20px;
-    
+   
   }
   .navbar .toggle {
     position: fixed;
@@ -19,7 +17,7 @@
     cursor: pointer;
     background: transparent;;
     border: none;
-    
+   
   }
   .menu-nav {
     list-style: none;
@@ -44,6 +42,7 @@
     display: block;
     padding: 1rem;
   }
+
 
   
 

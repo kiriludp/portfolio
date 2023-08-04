@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Routes, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Home from './pages/Home';
 import Navigation from './components/Navigation';
 import About from  './pages/About';
@@ -6,7 +6,10 @@ import Portfolio from './pages/Portfolio';
 import Resume from './pages/Resume';
 
 
+
+
 function App() {
+
 
 return (
 <div className='Main'>
@@ -21,7 +24,9 @@ return (
 </Router>
 </div>
 
+
 );
 }
+
 
 export default App;

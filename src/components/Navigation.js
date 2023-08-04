@@ -4,10 +4,12 @@ import mdClose from '../assets/imgs/close.svg';
 import { Nav } from 'react-bootstrap';
 import React, {useState} from 'react';
 
+
 function Navigation() {
 
+
   const [navbarOpen, setNavbarOpen] = useState(false);
-    
+   
     return (
       <div className="navi">
         <button className="toggle"
@@ -33,5 +35,6 @@ function Navigation() {
     )
 }
  
+
 
 export default Navigation;
