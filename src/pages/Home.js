@@ -3,13 +3,16 @@ import "../assets/Home.css";
 import { info } from "../components/Info";
 import Smol from "../components/Smol";
 import Socials from "../components/Socials";
+import pic from '../assets/imgs/pic.jpg';
 import { Box } from "@mui/material";
 
 
 function Home() {
   return (
     <div className="home">
-      <div className="title">Home</div>
+      <div className="title">
+        Home
+      </div>
 
 
       <div className="home-body">
@@ -37,13 +40,19 @@ function Home() {
           <h2>I am a {info.position}.</h2>
         </Box>
         <Box>
-          <Box component={"ul"}>
+        <Box>
+            <img src={pic}
+            alt="profPic"
+            height="300px"
+            width="300px" />
+        </Box>
+        <Box 
+        component={"ul"}
+        >
             {info.miniBio.map((bio, index) => (
               <Smol key={index} emoji={bio.emoji} text={bio.text} />
             ))}
           </Box>
-
-
           <Box display={'flex'} gap={'1.5rem'} justifyContent={'center'} fontSize={{xs: '2rem', md: '2.5rem'}}>
                {info.socials.map((social, index) => (
                   <Socials key={index} link={social.link} icon={social.icon} label={social.label} />

@@ -1,6 +1,6 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Home from './pages/Home';
-import Navigation from './components/Navigation';
+import Nav from './components/Nav';
 import About from  './pages/About';
 import Portfolio from './pages/Portfolio';
 import Resume from './pages/Resume';
@@ -14,7 +14,7 @@ function App() {
 return (
 <div className='Main'>
 <Router>
-<Navigation />
+<Nav />
 <Routes>
 <Route path='/' element={<Home />} />
 <Route path='/about' element={<About />} />

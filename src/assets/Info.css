@@ -1,0 +1,12 @@
+* {
+    
+    justify-content: center;
+}
+
+
+.emoji {
+    height: 30px;
+    width: 30px;
+    align-items: center;
+}
+
