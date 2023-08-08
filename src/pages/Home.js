@@ -1,51 +1,67 @@
-import React from "react";
-import { MDBContainer, MDBRow, MDBCol } from 'mdb-react-ui-kit';
-import "../assets/Home.css";
-import { info } from "../components/Info";
+import React from 'react';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Stack from 'react-bootstrap/Stack';
+import { info } from '../components/Info.js';
 import Smol from "../components/Smol";
 import Socials from "../components/Socials";
-import pic from '../assets/imgs/pic.jpg';
+import '../assets/Home.css';
+import Pic from '../assets/imgs/pic.jpg';
+
 
 
 function Home() {
   return (
-    <div className="body">
-      
-        <h1 className="title"> Home </h1>
-      
-      <MDBContainer>
-        <MDBRow>
-          <MDBCol size="4">
-            <img src={pic} style={{width: '400px', height:'400px'}} />
-          </MDBCol>
-          <MDBCol size="4" className="intro" style={{justifyContent:'center'}}>
-            <h2>Hey Demons.... it's j'boi{" "}
-            <p><span
-              style={{
-                background: info.gradient,
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
-            >
-              {" "}
-              {info.firstName}{" "}
-              </span></p></h2>
-          </MDBCol>
-        </MDBRow>
-        <MDBRow>
-          <MDBCol size="3" style={{flexWrap:"wrap", display: 'Flex-end' }}>
-          {info.miniBio.map((bio, index) => (
+    <div className="home-body">
+      <div className="title">
+        <h1 id="page">Home</h1>
+      </div>
+      <Container fluid>
+        <Row xs={1} md={2} lg={3} xl={4}>
+          <Col>
+      <div className="prof">
+        <img src={Pic} height='300px' width='300px' id="pic" />  
+      </div>
+      </Col>
+      <Col>
+      <Stack gap= {2}>
+      <div className="intro">
+      <h2 id="intro">Hey Demons.... it's j'boi{" "}</h2>
+           
+           <span
+           id="name"
+             style={{
+               background: info.gradient,
+               WebkitBackgroundClip: "text",
+               WebkitTextFillColor: "transparent",
+             }}>
+             {" "}
+             {info.firstName}{" "}
+             </span>
+      </div>
+      <div className="emojis">
+      {info.miniBio.map((bio, index) => (
               <Smol key={index} emoji={bio.emoji} text={bio.text} />
             ))}
+      </div>
+      </Stack>
+      </Col>
+      </Row>
+      <Row>
+      <Col xs={1}>
+      <div className='contact'>
+      <p>{info.socials.map((social, index) => (
+                  <Socials key={index} link={social.link} icon={social.icon} label={social.label} className="socials" />
+               ))}</p>
 
-          </MDBCol>
-        </MDBRow>
-      </MDBContainer>
+      </div>
+      </Col>
+      </Row>
+      </Container>
     </div>
- 
-  );
+  )
 }
 
 
-
-export default Home;
+export default Home
