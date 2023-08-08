@@ -1,31 +1,26 @@
 import React from "react";
+import { MDBContainer, MDBRow, MDBCol } from 'mdb-react-ui-kit';
 import "../assets/Home.css";
 import { info } from "../components/Info";
 import Smol from "../components/Smol";
 import Socials from "../components/Socials";
 import pic from '../assets/imgs/pic.jpg';
-import { Box } from "@mui/material";
 
 
 function Home() {
   return (
-    <div className="home">
-      <div className="title">
-        Home
-      </div>
-
-
-      <div className="home-body">
-        <Box
-          component={"main"}
-          display={"flex"}
-          flexDirection={{ xs: "column", med: "row" }}
-          alignItems={"center"}
-          justifyContent={"center"}
-        >
-          <h1>
-            Hi Folks! I am{" "}
-            <span
+    <div className="body">
+      
+        <h1 className="title"> Home </h1>
+      
+      <MDBContainer>
+        <MDBRow>
+          <MDBCol size="4">
+            <img src={pic} style={{width: '400px', height:'400px'}} />
+          </MDBCol>
+          <MDBCol size="4" className="intro" style={{justifyContent:'center'}}>
+            <h2>Hey Demons.... it's j'boi{" "}
+            <p><span
               style={{
                 background: info.gradient,
                 WebkitBackgroundClip: "text",
@@ -34,35 +29,23 @@ function Home() {
             >
               {" "}
               {info.firstName}{" "}
-            </span>
-            .
-          </h1>
-          <h2>I am a {info.position}.</h2>
-        </Box>
-        <Box>
-        <Box>
-            <img src={pic}
-            alt="profPic"
-            height="300px"
-            width="300px" />
-        </Box>
-        <Box 
-        component={"ul"}
-        >
-            {info.miniBio.map((bio, index) => (
+              </span></p></h2>
+          </MDBCol>
+        </MDBRow>
+        <MDBRow>
+          <MDBCol size="3" style={{flexWrap:"wrap", display: 'Flex-end' }}>
+          {info.miniBio.map((bio, index) => (
               <Smol key={index} emoji={bio.emoji} text={bio.text} />
             ))}
-          </Box>
-          <Box display={'flex'} gap={'1.5rem'} justifyContent={'center'} fontSize={{xs: '2rem', md: '2.5rem'}}>
-               {info.socials.map((social, index) => (
-                  <Socials key={index} link={social.link} icon={social.icon} label={social.label} />
-               ))}
-            </Box>
-         </Box>
-      </div>
+
+          </MDBCol>
+        </MDBRow>
+      </MDBContainer>
     </div>
+ 
   );
 }
+
 
 
 export default Home;

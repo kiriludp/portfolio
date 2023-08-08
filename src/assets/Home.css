@@ -1,5 +1,18 @@
-ul {
-    list-style: none;
+.title {
+    font-size: 100px;
+    color:gold;
+    margin: 50px;
+}
+
+.intro {
+    margin-top: 50px;
     
 }
 
+p {
+    text-align: center;
+}
+
+img {
+    border-radius: 100%;
+}

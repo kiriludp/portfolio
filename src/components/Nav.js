@@ -1,63 +1,26 @@
-import React, { useState, useEffect, useRef } from 'react';
-import Menu from "../assets/imgs/menu.svg";
-import Close from "../assets/imgs/close.svg";
-
+import React from 'react';
+import { slide as Menu } from 'react-burger-menu';
+import '../assets/Nav.css';
 
 
 
 function Nav() {
-      
-  const [isSideMenu, setSideMenu] = useState(false)
+  return (
+    <Menu>
+      <a className="menu-item" href="/">
+        Home
+      </a>
+      <a className="menu-item" href="/portfolio">
+        Portfolio
+      </a>
+      <a className="menu-item" href="/about">
+        About
+      </a>
+      <a className="menu-item" href="/resume">
+        Resume
+      </a>
+    </Menu>
+  );
+};
 
-  const open = (isSideMenu, setSideMenu) => {
-    return  (
-    setSideMenu(!isSideMenu)
-  )}
-
-  const domeNode = useRef()
-
-  const updateState = (event) => {
-    if (domeNode.current.contains (event.target)) {
-      return }
-      setSideMenu(false)
-    }
-    useEffect (() => {
-      document.addEventListener("mousedown", updateState)
-      return() => {
-        document.removeEventListener("mousedown", updateState)
-      }
-      },[])
-    
-      return (
-        <div className= "navi">
-          <header className="topBar">
-            <div className="menuBar">
-              <button
-              className="navIcon"
-              onClick ={() => {
-                open(isSideMenu)
-              }} >
-              
-                (isSideMenu ?) <img src={Menu}
-        style={{
-          width: '32px',
-          height: '32px' 
-                }} />
-              </button>
-              <div className="menuOptions" style={{ left: isSideMenu ? '0' : '-265px' }}>
-              <a href="/">Home </a>
-                <a href="/about">About</a>
-                <a href="/resume">Resume</a>
-                <a href="/portfolio">Portfolio</a>
-              </div>
-            </div>
-          </header>
-        </div>
-      );
-      
-      }
-        
-           
-
-
-export default Nav;
+export default Nav
