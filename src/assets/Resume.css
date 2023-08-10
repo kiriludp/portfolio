@@ -1,2 +1,17 @@
 
 
+.card-grid {
+    border-style: solid;
+}
+
+.card {
+    height: 300px;
+    width: 250px;
+    background-color: blue;
+}
+
+.front, 
+.back,
+p {
+    background-color: blue;
+}

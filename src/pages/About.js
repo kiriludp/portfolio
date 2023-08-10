@@ -1,46 +1,45 @@
 import React from 'react';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import '../assets/About.css';
 import {info} from "../components/Info";
 
 
-
-
-
-
  function About() {
+
     const firstName = info.firstName.toLowerCase()
 
-
     return (
-        <div className="abso">
-            <div className="top">
-               
-                <h1>about {firstName}</h1>
+        <div className="about-body">
+            <div className="header">
+                <h1 id="page">About</h1>
             </div>
-            <div className="bio-graph">
-                {info.bio}
-            </div>
-            <div className="skillz">
-               
-                <h1>proficient with</h1>
-                <ul className="skills">
-                {info.skills.proficientWith.map((proficiency, index) =>
-                    <li key={index}>{proficiency}</li>)}
-                </ul>
-                <h1>Exposed To</h1>
-                <ul className="skills">
-                {info.skills.exposedTo.map((skill, index) =>
-                    <li key={index}>{skill}</li>)}
-                </ul>
-            </div>
-            <div className="hobbiez">
-                <h1>hobbies/interests</h1>
-                <ul>
+            <Container>
+                <Row className="row">
+                    <Col sm={8}>
+                        {info.bio}
+                    </Col>
+                </Row>
+                <Row>
+                    <Col sm={5} className="column">
                     {info.hobbies.map((hobby, index) => (
                         <li key={index}>{hobby.text}</li>
                     ))}
-                </ul>
+                    </Col>
+                    <Col sm={5} className="column">
+                    {info.skills.exposedTo.map((skill, index) =>
+                    <li key={index}>{skill}</li>)}
+                    </Col>
+                </Row>
+            </Container>
+            <div className="contact">
+                here will be the contact info or whatevvvs
             </div>
+
+
+                
+
         </div>
         );
     }

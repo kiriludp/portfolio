@@ -13,7 +13,7 @@ import Quiz from '../assets/imgs/quiz2.png';
 function Portfolio() {
   return (
     <div className="body">
-      <div className="title">
+      <div className="header">
       <h1>Portfolio</h1>
       </div>
       <Row>

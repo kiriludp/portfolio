@@ -1,23 +1,22 @@
-
 * {
     background-color: #231f20;
+
 }
 
 
-
-.title {
-    font-size: 100px;
-    margin: 50px 0 10px 200px;
-    background: linear-gradient(to bottom, #cfc09f 22%,#634f2c 24%, #cfc09f 26%, #cfc09f 27%,#ffecb3 40%,#3a2c0f 78%); 
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #fff;
-    font-family: 'Bebas Neue', sans-serif, monospace ;
-    
+.row {
+    border-style: solid;
+    margin: 50px;
 }
 
+.column {
+    border-style: solid;
+    margin: 15px;
+}
 
-
+.contact {
+    text-align: center;
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 

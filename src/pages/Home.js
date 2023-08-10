@@ -14,9 +14,11 @@ import Pic from '../assets/imgs/pic.jpg';
 function Home() {
   return (
     <div className="home-body">
-      <div className="title">
+
+      <div className="header">
         <h1 id="page">Home</h1>
       </div>
+
       <Container fluid>
         <Row xs={1} md={2} lg={3} xl={4}>
           <Col>
