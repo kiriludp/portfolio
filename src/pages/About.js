@@ -28,8 +28,8 @@ import {info} from "../components/Info";
                     ))}
                     </Col>
                     <Col sm={5} className="column">
-                    {info.skills.exposedTo.map((skill, index) =>
-                    <li key={index}>{skill}</li>)}
+                    {info.skills.map((skills, index) =>
+                    <li key={index}>{skills.example}</li>)}
                     </Col>
                 </Row>
             </Container>

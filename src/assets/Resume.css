@@ -1,17 +1,34 @@
-
-
-.card-grid {
-    border-style: solid;
+.c {
+  position: absolute;
+  max-width: 500px;
+  max-height: 500px;
+  width: 350px;
+  height: 200px;
+  cursor: pointer;
+  will-change: transform, opacity;
 }
 
-.card {
-    height: 300px;
-    width: 250px;
-    background-color: blue;
+.front,
+.back {
+  background-size: cover;
+  
 }
 
-.front, 
-.back,
-p {
-    background-color: blue;
+.back {
+  background-color: blue;
+  color:aliceblue; 
+  
+}
+
+.front {
+  background-color: gold;
+
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  
 }

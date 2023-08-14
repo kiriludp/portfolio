@@ -55,11 +55,32 @@ export const info ={
         
     ],
     bio: "I am a recent graduate of the coding bootcamp course at University of Washington. I have an extensive professional background and am looking to be a part of a team that thrives on challenge and creative problem solving. ",
-    skills:
+    skills:[
     {
-        proficientWith:['javascript', 'react', 'git', 'github', 'bootstrap', 'html5', 'css3', 'Node.js', 'Mongoose', 'MySql', 'SQL', 'java'],
-        exposedTo: ['python', 'adobe illustrator', 'canvas']
+        example: 'Dedication to detail'
     },
+    {
+        example: 'Agile Methodology'
+    },
+    {
+        example: 'Communication-- both written and verbal'
+    },
+    {
+        example: 'Understand flexible timelines and deadlines'
+    },
+    {
+        example: 'Time management and prioritization'
+    },
+    {
+        example: 'Ability to understand people`s needs from diverse backgrounds and communication styles'
+    },
+    {
+        example: 'Conflict resolution'
+    },
+    {
+        example: 'Thrives in challenging environments that require creative problem solving'
+    },
+],
     hobbies: [
         {
             text: 'Horror Movies'
@@ -104,6 +125,42 @@ export const info ={
             image: <img src={quiz} className='port'/>
 
 
+        },
+    ],
+    education: [
+        {
+            school: 'Fishers High School',
+            diploma: 'diploma'
+        },
+        {
+            school: 'University of Washington',
+            diploma: 'Web Development'
+        },
+    ],
+    work: [
+        {
+            position: 'Project Manager',
+            company: 'Kaiser Permanente',
+            dates: 'Oct 2017-June 2023'
+            
+        },
+        {
+            position: 'Store Manager',
+            company: 'Starbucks',
+            dates: 'Mar 2015 - Aug 2017'
+            
+        },
+        {
+            position: 'Store Manager',
+            company: 'Diane Von Furstenberg',
+            dates: 'Mar 2013 - Mar 2015'
+
+        }
+    ],
+    languages: [
+        {
+        proficientWith:['javascript', 'react', 'git', 'github', 'bootstrap', 'html5', 'css3', 'Node.js', 'Mongoose', 'MySql', 'SQL', 'java'],
+        exposedTo: ['python', 'adobe illustrator', 'canvas']
         },
     ]
 }
