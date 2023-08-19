@@ -1,56 +1,79 @@
 import React from 'react';
-import '../assets/Resume.css';
-import {info} from "../components/Info";
+import "../assets/Resume.css";
 
 
-  
-
-export default function() {
+export default function Resume() {
 
   return(
-    <div className="res-body">
-      <div id="title">
+    <div className="resume-body">
+      <div className="head">
         <h1 id="header">Resume</h1>
       </div>
       <div className="timeline">
-      <div className="info">
         <div className="outer">
           <div className="card">
-            <div className="details">
-            <h6 className="label">Education</h6>
-              {info.education.map((education, index) => (
-              <p key={index}> {education.school}< br/> {education.diploma} </p>
-            ))}
+            <div className="info">
+              <div className="title">
+              
+                <h4 className="card-name">Education</h4>
+                
+                 <p> Here is where all the information one might need about my education</p>
+                
+              </div>
             </div>
           </div>
           <div className="card">
-            <div className="details">
-              <h6 className="label">Experience</h6>
-              <p>Work Experience Here.</p>
+            <div className="info">
+              <div className="title">
+              <p className="details">
+                <h4 className="card-name">Languages</h4>
+                
+                  <ul>
+                    <li>Language</li>
+                    <li>Language</li>
+                    <li>Language</li>
+                  </ul>
+                </p>
+              </div>
             </div>
           </div>
           <div className="card">
-            <div className="details">
-            <h6 className="label">Languages</h6>
-              <ul>
-                <li>Ones I know</li>
-              </ul>
-              <ul>
-                <li>Ones I'm familiar with</li>
-              </ul> 
+            <div className="info">
+              <div className="title">
+                <h4 className="card-name">Skills</h4>
+                <p className="details">
+                <ul>
+                    <li>Skills</li>
+                    <li>Skills</li>
+                    <li>Skills</li>
+                  </ul>
+                </p>
+              </div>
             </div>
           </div>
           <div className="card">
-            <div className="details">
-            <h6 className="label">Skills</h6>
-              <p>My Skills</p>
+            <div className="info">
+              <div className="title">
+                <h4 className="card-name">Experience</h4>
+                <p className="details">
+                <ul>
+                    <li>WorkWorkWork</li>
+                    <li>WorkWorkWork</li>
+                    <li>WorkWorkWork</li>
+                  </ul>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      
-      </div>
-      </div>
-    </div>
-  )
 
+        </div>
+      </div>
+    </div> 
+        
+      
+    
+
+  );
 }
+
+
